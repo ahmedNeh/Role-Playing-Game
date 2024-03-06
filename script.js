@@ -115,7 +115,11 @@ function update(location) {
 }
 
 function goTown() {
-  update(locations[0]);
+  update(locations[0]); 
+  if (run) {
+    text.innerText = "You ran from a fight. You're back to Town Square";
+  }
+  
 }
 
 function goStore() {
@@ -124,6 +128,10 @@ function goStore() {
 
 function goCave() {
   update(locations[2]);
+}
+
+function run() {
+  text.innerText = "you ran from a fight";
 }
 
 function buyHealth() {
